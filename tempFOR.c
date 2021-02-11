@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #define LOWWER 0
-#define UPPER 300   //DEFINIMOS UN NOMBRE PARA NUESTRAS CONSTANTES
+#define UPPER 300   
 #define STEP 20
 
 
