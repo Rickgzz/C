@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+#define LOWWER 0
+#define UPPER 300   //DEFINIMOS UN NOMBRE PARA NUESTRAS CONSTANTES
+#define STEP 20
+
+
+main () 
+{
+    int fahr;
+
+    printf("FAHRENHEIT A CELSIUS\n");
+
+    for (fahr=UPPER; fahr>=LOWWER; fahr=fahr-STEP)
+        printf("%6d %12.1f\n",fahr,(5.0/9.0)*(fahr-32));
+}
