@@ -12,7 +12,6 @@ int main() {
         
         if (parity(j)== EVEN) {
             count = count + 1;
-            
         }
     }
     printf("%d\n", count);
@@ -21,5 +20,3 @@ int main() {
 int parity(int v) {
     return v%2 ;
 }
-
-/* 6 */
