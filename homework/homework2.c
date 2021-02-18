@@ -6,5 +6,3 @@ int main(){
     for (i=50; i>=12; i=i-7);
     printf("%d\n",i);
 }
-
-/* 8 */
