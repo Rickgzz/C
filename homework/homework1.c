@@ -3,48 +3,34 @@
 #define MAX 1000
 #define IN 1
 #define OUT 0
-char quitar(char);
-char input[MAX];
-char output[MAX];
 // NO SIRVO :(
-//imprime las palabras dentro de <> pero no jala si hay un \n
 
 int main() {
     
-  int i, l, n;
-
+  int i, l, n, m;
+  
+  char input[MAX];
+  char output[MAX];
+      
   printf("Insertar texto formato HTML: ");
-  gets(input);
+  gets(input);        //cambiar esta parte****
   l = strlen(input);
   n = OUT;
-      
   printf("\nTexto plano: ");
-     
+
   for (i = 0; i<l ; ++i) {
-          
-    if (input[i] == '<')
+    
+    if (input[i] == '<')  //tomar solo las palabras dentro de <>
       n = IN;
     if (input[i] == '>')
       n = OUT;       
     if (n == OUT)
-      output[i] = input[i];
-      //quitar(output[i]);
-      printf("%c",output[i]); // checar  
-     } 
-     
-/*
- }
+      output[i] = input[i]; //copiar de input a output
+    
+    if (output[i] == '>') //eliminar los >
+        output[i] = ' ';
+        
+    printf("%c",output[i]); //imprimir output
+    }
 
-char quitar() {
-  int m;
-     
-  for (m = 0; m<30 ; ++m) {
-         
-   if (output[m]=='<')
-     output[m] = ('_');
-     }
-            
-  return output[m];
-  }
- 
-*/
+}
