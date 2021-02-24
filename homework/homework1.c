@@ -3,46 +3,48 @@
 #define MAX 1000
 #define IN 1
 #define OUT 0
-// NO FUNCIONO :(
 char quitar(char);
+char input[MAX];
+char output[MAX];
+// NO SIRVO :(
+//imprime las palabras dentro de <> pero no jala si hay un \n
 
 int main() {
     
-      int i, l, n;
+  int i, l, n;
+
+  printf("Insertar texto formato HTML: ");
+  gets(input);
+  l = strlen(input);
+  n = OUT;
       
-      char input[MAX];
-      char output[MAX];
+  printf("\nTexto plano: ");
      
-      printf("Insertar texto formato HTML: ");
-      gets(input);
-      l = strlen(input);
-      n = OUT;
-      
-     printf("\nTexto plano: ");
-     
-     for (i = 0; i<l ; ++i) {
+  for (i = 0; i<l ; ++i) {
           
-          if (input[i] == '<')
-             n = IN;
-          if (input[i] == '>')
-             n = OUT;       
-          if (n == OUT)
-             output[i] = input[i];
-             //quitar(output[i]);
-             printf("%c",output[i]); // checar  
-          }
+    if (input[i] == '<')
+      n = IN;
+    if (input[i] == '>')
+      n = OUT;       
+    if (n == OUT)
+      output[i] = input[i];
+      //quitar(output[i]);
+      printf("%c",output[i]); // checar  
+     } 
      
-     }
+/*
+ }
 
-
-char quitar(char) {
-     int m;
+char quitar() {
+  int m;
      
-     for (m = 0; m<30 ; ++m) {
+  for (m = 0; m<30 ; ++m) {
          
-         if (output[m]=='<')
-             (output[m] = '_');
-             }
-             
-     return output[m];
-    }
+   if (output[m]=='<')
+     output[m] = ('_');
+     }
+            
+  return output[m];
+  }
+ 
+*/
