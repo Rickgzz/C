@@ -20,7 +20,7 @@ int main() {
 
   for (i = 0; i<l ; ++i) {
     
-    if (input[i] == '<')  //take only words inside <--->
+    if (input[i] == '<')  //take only words inside >---<
       n = IN;
     if (input[i] == '>')
       n = OUT;       
