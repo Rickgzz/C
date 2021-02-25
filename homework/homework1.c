@@ -3,7 +3,7 @@
 #define MAX 1000
 #define IN 1
 #define OUT 0
-// DOESN'T WORK YET :(
+
 
 int main() {
     
