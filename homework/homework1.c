@@ -20,14 +20,14 @@ int main() {
 
   for (i = 0; i<l ; ++i) {
     
-    if (input[i] == '<')  //take only words inside <>
+    if (input[i] == '<')  //take only words inside <--->
       n = IN;
     if (input[i] == '>')
       n = OUT;       
     if (n == OUT)
-      output[i] = input[i]; //copy from input to output list
+      output[i] = input[i+1]; //copy from input to output array
     
-    if (output[i] == '>') //eliminate >
+    if (output[i] == '<') //eliminate '<'
         output[i] = ' ';
         
     printf("%c",output[i]); //print output text
