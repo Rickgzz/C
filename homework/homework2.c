@@ -36,7 +36,7 @@ void convertArray(int array[], int num){  //convertir a binario
 int main(){
 	int n, j=1;
 	int arr[100];
-	printf("Enter number of digits to know: ");
+	printf("How many prime number you want to know?: ");
 	scanf("%d",&n);
 
 	while (n<0)	{
