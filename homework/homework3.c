@@ -56,5 +56,5 @@ main(){
     }
   }
 
-  printf("%s\n", str);                    //imprimir el array modificado
+  printf("\n%s", str);                    //imprimir el array modificado
 }
