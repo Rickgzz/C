@@ -2,8 +2,6 @@
 #include <stdlib.h> 
 #include <string.h>
 
-/* this code is based on the exampe of the book and the one done by RogelioASR */
-
 #define MAX 100  
 #define NUMBER '0'
 
@@ -173,3 +171,6 @@ int options(int c, char s[]) {
 
 	return 0;
 }
+
+
+/* this code is based on the exampe of the book and the one done by RogelioASR */
