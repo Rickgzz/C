@@ -88,13 +88,13 @@ void open(int OUT[ROWS][COLUMNS],int u[ROWS][COLUMNS], int i, int j) {
 void menu(int OUT[ROWS][COLUMNS],int u[ROWS][COLUMNS]) {
 
     int chs,i,j;
-    int boom = 9;                                 
+    int bombs = 9;                                 
     int num = 0;                                    
     while (1) {
 
         system("cls");
         show(OUT,u);
-        printf("There's %d bombs left\n",boom);
+        printf("There's %d bombs left\n",bombs);
         printf("1.Scan  2.Check  3.Uncheck \n");
         printf("Choose an option: ");
         scanf("%d", &chs);
@@ -143,7 +143,7 @@ void menu(int OUT[ROWS][COLUMNS],int u[ROWS][COLUMNS]) {
                 continue;
             }
             u[i][j] = -1;
-            boom --;            
+            bombs--;            
         }
         else if (chs == 3) {
             if (u[i][j] != -1) {
@@ -152,7 +152,7 @@ void menu(int OUT[ROWS][COLUMNS],int u[ROWS][COLUMNS]) {
                 continue;
             }
             u[i][j] = 0;
-            boom++;
+            bombs++;
         }
     }
 }
@@ -160,7 +160,8 @@ void menu(int OUT[ROWS][COLUMNS],int u[ROWS][COLUMNS]) {
 int main(){
     int OUT[ROWS][COLUMNS] = { 0 };        // Guarde la matriz bidimensional de información sobre bombas
     int u[ROWS][COLUMNS] = { 0 };          // Guardar una matriz de información bidimensional
-    init(OUT);             			         // Inicialización de matriz
-    menu(OUT, u);            		         // Ingresa al menú
+    init(OUT);             			       // Inicialización de matriz
+    menu(OUT, u);            		       // Ingresa al menú
     return 0;
 }
+//CREDITS ISRAEL VERA
