@@ -164,4 +164,5 @@ int main(){
     menu(OUT, u);            		       // Ingresa al menú
     return 0;
 }
-//CREDITS ISRAEL VERA
+
+//thanks to Israel Vera for helping me.
