@@ -3,6 +3,8 @@
 #include <time.h>
 #include "lib.h"
 
+/* in online-gbd compile this file and use "lib.h" to use it */
+
 void show(int OUT [ROWS][COLUMNS],int u[ROWS][COLUMNS]) {
 
     int i, j;
