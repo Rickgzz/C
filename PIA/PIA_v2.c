@@ -11,8 +11,7 @@ struct resistencias{
 int main(){
     float voltT, ResT=1, AmpT=2;
     int a1, a2, loop, r1, rn;
-    int i =0, i2=0, j=0, n=1;
-    int rvals[MAX];
+    int i =0, n=1;
     
     printf("PIA calculator\n\n");
 
