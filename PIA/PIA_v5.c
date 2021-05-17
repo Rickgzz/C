@@ -91,6 +91,12 @@ int main(){
 
     for (i=1; i<=p; i++)    ResE += 1/(PARALLEL[i].resistance);     
     
+    if(p>0){                                                  
+        
+        ResE = 1/(ResE);
+        ResT = ResE+ResT;
+    }
+    
     AmpT = (voltT/ResT);
     
     for (i=1; i<=s; i++){                                          
@@ -101,8 +107,6 @@ int main(){
     
     if(p>0){                                                  
         
-        ResE = 1/(ResE);
-        ResT = ResE+ResT;
         AmpE = AmpT;
         voltE = (AmpE*ResE);
     }
