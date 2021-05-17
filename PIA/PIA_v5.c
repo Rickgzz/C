@@ -1,7 +1,6 @@
 #include <stdio.h>
 #define MAX 50
 
-
 struct SERIE{
 
     int num;
@@ -88,38 +87,37 @@ int main(){
         }
     }
     
-    for (i=1; i<=s; i++)    ResT += (SERIE[i].resistance);          //suma de resistencias 
+    for (i=1; i<=s; i++)    ResT += (SERIE[i].resistance);          
 
     for (i=1; i<=p; i++)    ResE += 1/(PARALLEL[i].resistance);     
     
-    if(p>0){
+    AmpT = (voltT/ResT);
+    
+    for (i=1; i<=s; i++){                                          
+        
+        SERIE[i].current = AmpT;
+        SERIE[i].voltage = (AmpT*(SERIE[i].resistance));
+    }
+    
+    if(p>0){                                                  
         
         ResE = 1/(ResE);
         ResT = ResE+ResT;
+        AmpE = AmpT;
+        voltE = (AmpE*ResE);
     }
-
-    AmpT = (voltT/ResT);
-    
-    for (i=1; i<=s; i++){                                          //valores de componentes en serie
-        
-        SERIE[i].current = AmpT;
-        SERIE[i].voltage = (voltT/SERIE[i].resistance);
-    }
-    
-    AmpE = AmpT;
-    voltE = (voltT/ResE);                                            //valores de componentes Eq
     
     for (i=1; i<=p; i++){
         
         PARALLEL[i].voltage = voltE;
-        PARALLEL[i].current = (AmpE/PARALLEL[i].resistance);         //valores de componentes en paralelo
+        PARALLEL[i].current = (voltE/(PARALLEL[i].resistance));        
     } 
 
-    printf("\n\nThe total Voltage is: %.2f volts\n", voltT);        //imprimir valores del circuito
+    printf("\n\nThe total Voltage is: %.2f volts\n", voltT);        
     printf("The total Resistance is: %.2f ohms\n", ResT);
     printf("The total Current is: %.2f amperes\n", AmpT); 
 
-    printf("\nValues of the components in SERIES:\n");              // imprimir valores individuales de cada compunente
+    printf("\nValues of the components in SERIES:\n");             
     for(i=1; i<=s; i++){
 
         printf("Component(%d): [V:%.1f][R:%.1f][I:%.1f]\n", SERIE[i].num, SERIE[i].voltage, SERIE[i].resistance, SERIE[i].current );
@@ -131,6 +129,3 @@ int main(){
         printf("Component(%d): [V:%.1f][R:%.1f][I:%.1f]\n", PARALLEL[i].num, PARALLEL[i].voltage, PARALLEL[i].resistance, PARALLEL[i].current );
     }
 }
-
-
-// HACER UNA FUNCION QUE OBTENGA LA RES EQUIVALENTE, UNA DE RES TOTAL Y OTRA DE VALORES ABSOLUTOS
