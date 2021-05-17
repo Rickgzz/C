@@ -19,8 +19,8 @@ struct PARALLEL{
 int main(){
 
     float voltT, ResT, AmpT, voltE, ResE, AmpE;
-    int a1, a2, loop;
-    int p=0, s=1, i=0, n=1;
+    int a1, a2, i, loop;
+    int p=0, s=1, n=1;
 
     printf("\nPIA Circuit Calculator  ~(^-^)~   \n\n");
 
@@ -30,7 +30,7 @@ int main(){
 
     printf("Introduce resistance value component (%d): ",n);
     scanf("%f", &SERIE[s].resistance);
-    SERIE[s].num = n;
+    SERIE[s].num = n++;
 
 
     printf("\nDo you want to add another component?\n(1-YES 2-NO): ");
@@ -42,7 +42,7 @@ int main(){
 
         fflush(stdin);
 
-        if (i>0){
+        if (n>2){
             printf("\nDo you want to add another component?\n(1-YES 2-NO): ");
             scanf("%d",&a1);
         }
@@ -56,22 +56,18 @@ int main(){
             scanf("%d",&a2);
 
             if (a2==1){
-                s++;
-                n++;
+                
                 printf("\nIntroduce de resistance value of the component (%d): ",n);
-                scanf("%f", &SERIE[s].resistance);
-                SERIE[s].num = n;
-                i++;
+                scanf("%f", &SERIE[++s].resistance);
+                SERIE[s].num = n++;
                 continue;
             }
 
             else if (a2==2){
-                p++;
-                n++;
+
                 printf("\nIntroduce de resistance value of the component (%d): ", n);
-                scanf("%f", &PARALLEL[p].resistance);
-                PARALLEL[p].num = n;
-                i++;
+                scanf("%f", &PARALLEL[++p].resistance);
+                PARALLEL[p].num = n++;
                 continue;
             }
 
@@ -94,7 +90,7 @@ int main(){
     if(p>0){                                                  
         
         ResE = 1/(ResE);
-        ResT = ResE+ResT;
+        ResT += ResE;
     }
     
     AmpT = (voltT/ResT);
@@ -121,15 +117,21 @@ int main(){
     printf("The total Resistance is: %.2f ohms\n", ResT);
     printf("The total Current is: %.2f amperes\n", AmpT); 
 
-    printf("\nValues of the components in SERIES:\n");             
+    printf("\nVoltage[V]  Resistance[R]  Current[I]\n");
+    printf("\nValues of the components in SERIES:\n");
     for(i=1; i<=s; i++){
 
         printf("Component(%d): [V:%.1f][R:%.1f][I:%.1f]\n", SERIE[i].num, SERIE[i].voltage, SERIE[i].resistance, SERIE[i].current );
     }
     
-    printf("\nValues of the components in PARALLEL:\n");
-    for(i=1; i<=p; i++){
+    if (p>0){
 
-        printf("Component(%d): [V:%.1f][R:%.1f][I:%.1f]\n", PARALLEL[i].num, PARALLEL[i].voltage, PARALLEL[i].resistance, PARALLEL[i].current );
+        printf("\nValues of the components in PARALLEL:\n");
+        for(i=1; i<=p; i++){
+
+            printf("Component(%d): [V:%.1f][R:%.1f][I:%.1f]\n", PARALLEL[i].num, PARALLEL[i].voltage, PARALLEL[i].resistance, PARALLEL[i].current );
+        }
     }
 }
+
+// HACER UNA FUNCION QUE OBTENGA LA RES EQUIVALENTE, UNA DE RES TOTAL Y OTRA DE VALORES ABSOLUTOS
