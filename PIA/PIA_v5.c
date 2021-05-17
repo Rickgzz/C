@@ -103,7 +103,6 @@ int main(){
     for (i=1; i<=s; i++){                                          //valores de componentes en serie
         
         SERIE[i].current = AmpT;
-        
         SERIE[i].voltage = (voltT/SERIE[i].resistance);
     }
     
@@ -113,7 +112,6 @@ int main(){
     for (i=1; i<=p; i++){
         
         PARALLEL[i].voltage = voltE;
-        
         PARALLEL[i].current = (AmpE/PARALLEL[i].resistance);         //valores de componentes en paralelo
     } 
 
