@@ -43,47 +43,49 @@ int main(){
             break;
         }
 
-        else if (a1 == 1){
+        else if(a1 == 1){
             printf("\nHow is conected your component?\n(1-SERIES 2-PARALLEL): ");
             scanf("%d",&a2);
 
-            switch(a2){
+            if (a2==1){
+                
+                printf("\nInsert resistance value of component (%d): ",count);
 
-                case(1):
-                    printf("\nInsert resistance value of component (%d): ",count);
+                do{
+                    scanf("%f",&value);
+                    if(value<=0) {
+                        printf("Zero and Negative values are not valid, Try again\n");
+                        printf("\nInsert resistance value of component (%d): ", count);
+                    }
+                }while(value<=0);
 
-                    do{
-                        scanf("%f",&value);
-                        if(value<=0) {
-                            printf("Zero and Negative values are not valid, Try again\n");
-                            printf("\nInsert resistance value of component (%d): ", count);
-                        }
-                    }while(value<=0);
-
-                    SERIE[++s].resistance = value;
-                    SERIE[s].num = count++;
-                    continue;
-
-                case(2):
-                    printf("\nInsert resistance value of component (%d): ", count);
-                    
-                    do{
-                        scanf("%f",&value);
-                        if(value<=0) {
-                            printf("Zero and Negative values are not valid, Try again\n");
-                            printf("\nInsert resistance value of component (%d): ", count);
-                        }
-                    }while(value<=0);
-                    
-                    PARALLEL[++p].resistance = value;
-                    PARALLEL[p].num = count++;
-                    continue;
-
-                default:
-                    printf("Sorry, try again\n");
-                    continue;
-                }
+                SERIE[++s].resistance = value;
+                SERIE[s].num = count++;
+                continue;
             }
+
+            else if (a2==2){
+
+                printf("\nInsert resistance value of component (%d): ", count);
+                    
+                do{
+                    scanf("%f",&value);
+                    if(value<=0) {
+                        printf("Zero and Negative values are not valid, Try again\n");
+                        printf("\nInsert resistance value of component (%d): ", count);
+                    }
+                }while(value<=0);
+            
+                PARALLEL[++p].resistance = value;
+                PARALLEL[p].num = count++;
+                continue;
+            }
+
+            else if (a2 != 1 && a2 != 2){
+                printf("Sorry, try again2\n");
+                continue;
+            }
+        }
 
         else if (a1 != 1 && a1 != 2){
             printf("Sorry, try again1\n");
@@ -96,62 +98,4 @@ int main(){
     ValSerie(&AmpT, s);
     ValParallel(&AmpE, &AmpT, &voltE, &ResE, p);
     PrintValues(voltT, ResT, AmpT, p, s);
-}
-
-void SumRes(float* rT, float* rE, int p, int s){       
-    int i;
-
-    for (i=1; i<=s; i++)    *rT += (SERIE[i].resistance);          
-    for (i=1; i<=p; i++)    *rE += 1/(PARALLEL[i].resistance);
-
-    if(p>0){          
-        *rE = 1/(*rE);
-        *rT += *rE;
-    }
-}
-
-void ValSerie(float* aT, int s){
-    int i;
-
-    for (i=1; i<=s; i++){                                             
-        SERIE[i].current = *aT;
-        SERIE[i].voltage = (*aT*(SERIE[i].resistance));
-    }
-}
-
-void ValParallel(float* aE, float* aT, float* vE, float* rE, int p){
-    int i;
-
-    if(p>0){                                                  
-        *aE = *aT;
-        *vE = (*aE)*(*rE);
-    }
-    
-    for (i=1; i<=p; i++){
-        PARALLEL[i].voltage = *vE;
-        PARALLEL[i].current = (*vE/(PARALLEL[i].resistance));        
-    } 
-}       
-
-void PrintValues(float vT, float rT, float aT, int p, int s){
-    int i;
-
-    printf("\n\nThe total Voltage is: %.2f volts\n", vT);       
-    printf("The total Resistance is: %.2f ohms\n", rT);
-    printf("The total Current is: %.2f amperes\n", aT); 
-
-    printf("\nVoltage[V]  Resistance[R]  Current[I]\n");
-    printf("\nValues of the components in SERIES:\n");
-
-    for(i=1; i<=s; i++){
-        printf("Component(%d): [V:%.1f][R:%.1f][I:%.1f]\n", SERIE[i].num, SERIE[i].voltage, SERIE[i].resistance, SERIE[i].current );
-    }
-    
-    if (p>0){
-        printf("\nValues of the components in PARALLEL:\n");
-
-        for(i=1; i<=p; i++){
-            printf("Component(%d): [V:%.1f][R:%.1f][I:%.1f]\n", PARALLEL[i].num, PARALLEL[i].voltage, PARALLEL[i].resistance, PARALLEL[i].current );
-        }   
-    }
 }
