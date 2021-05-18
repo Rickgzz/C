@@ -44,11 +44,11 @@ void PrintValues(float vT, float rT, float aT, int p, int s){
     printf("The total Resistance is: %.2f ohms\n", rT);
     printf("The total Current is: %.2f amperes\n", aT); 
 
-    printf("\nVoltage[V]  Resistance[Ω]  Current[I]\n");
+    printf("\nVoltage[V]  Resistance[R]  Current[I]\n");
     printf("\nValues of the components in SERIES:\n");
     for(i=1; i<=s; i++){
 
-        printf("Component(%d): [V:%4.1f] [Ω:%4.1f] [I:%4.1f]\n", SERIE[i].num, SERIE[i].voltage, SERIE[i].resistance, SERIE[i].current );
+        printf("Component(%d): [V:%4.1f] [R:%4.1f] [I:%4.1f]\n", SERIE[i].num, SERIE[i].voltage, SERIE[i].resistance, SERIE[i].current );
     }
     
     if (p>0){
@@ -56,7 +56,7 @@ void PrintValues(float vT, float rT, float aT, int p, int s){
         printf("\nValues of the components in PARALLEL:\n");
         for(i=1; i<=p; i++){
 
-            printf("Component(%d): [V:%4.1f] [Ω:%4.1f] [I:%4.1f]\n", PARALLEL[i].num, PARALLEL[i].voltage, PARALLEL[i].resistance, PARALLEL[i].current );
+            printf("Component(%d): [V:%4.1f] [R:%4.1f] [I:%4.1f]\n", PARALLEL[i].num, PARALLEL[i].voltage, PARALLEL[i].resistance, PARALLEL[i].current );
         }
     }
 }
