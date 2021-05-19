@@ -3,6 +3,7 @@
 
 The main purpose of this program is to calculate the voltage, current and resistance of our circuits and for each component in it. 
 
+
 The circuits can be connected in: 
  
 
@@ -23,6 +24,9 @@ Once you have finished introduccing components, the code take them...
 
 
 ## Functions
+
+
+## Series & Parallel circuits
 
 ## Execution
 
