@@ -31,7 +31,7 @@ struct SERIE{
 
 } SERIE[MAX];
 ```
-* Here is were all the data related to the components connected in series would be storage, such as the component numbers, their individual resistance value, current and voltage.
+* Here is were all the data related to the components connected in series will be storage, such as the component numbers, their individual resistance value, current and voltage.
 
 
 
@@ -43,7 +43,7 @@ struct PARALLEL{
     
 } PARALLEL[MAX];
 ```
-* Here is were all the data related to the components connected in parallel would be storage, such as the component numbers, their individual resistance value, current and voltage.
+* Here is were all the data related to the components connected in parallel will be storage, such as the component numbers, their individual resistance value, current and voltage.
 
 ### Functions
 
@@ -75,6 +75,14 @@ void PrintValues(float, float, float, int, int);
 <img src="https://github.com/Rickgzz/C/blob/main/Exercises/outputs.png">
 </p>
 
+The Outputs of the program are divided in 3 groups:
+
+
+* First all the total values of the circuit will be printed.
+
+* Then the all the individual values of each component conected in series will follow.
+
+* Finally, if the circuit previously entered with has components connected in parallel, in this section all the values of each component will be printed.
 
 ## Execution
 
