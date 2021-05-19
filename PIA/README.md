@@ -109,5 +109,5 @@ Also is recomended to use VS Code.
 
 ## Demo
 
-**Watch a video of the code in action: [here](https://www.youtube.com/watch?v=dQw4w9WgXcQ)**
+**Watch a video of the code in action: [here]()**
 
