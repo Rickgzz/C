@@ -17,9 +17,9 @@ The circuits can be connected in:
 
 ## Structure
 
-The principal structure of the code consist on a serie of question in a loop that collect all the input data in a couple of Structs, separating them depending of how the component is conected.
+The main structure of the code consists of a series of questions in a loop that collects all the input data in a couple of Structs, separating them depending on how the component is connected.
 
-Once you have finished introduccing components, the code take them...
+After you have finished entering the components, the code will take all the data storage in the Structs and perform all the operations to get the expected values from the circuit.
 
 ### Structs
 
@@ -67,7 +67,6 @@ void PrintValues(float, float, float, int, int);
 ```
 * The *PrintValues* function is responsible for printing both the total values of the circuit and the values of each component in it.
 
-## Series & Parallel circuits
 
 ## Outputs
 
