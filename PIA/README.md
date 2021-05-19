@@ -25,6 +25,21 @@ Once you have finished introduccing components, the code take them...
 
 ## Functions
 
+```
+void SumRes(float*, float*, int, int);
+```
+
+```
+void ValSerie(float*, int);
+```
+
+```
+void ValParallel(float*, float*, float*, float*, int);
+```
+
+```
+void PrintValues(float, float, float, int, int);
+```
 
 ## Series & Parallel circuits
 
@@ -46,9 +61,11 @@ Also is recomended to use VS Code.
 ```
 
 ## Author
-```
-Ricardo Gael Gonzalez Varela    #1895539      Career: IME
-```
+
+| ID | Career | Name |
+| ------------ | ------------ | ------------ |
+| 1895539 | IME | Ricardo Gael Gonzalez Varela |
+
 
 ## Demo
 
