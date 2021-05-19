@@ -28,6 +28,8 @@ Files needed to run the code:
 * [functions.c](https://github.com/Rickgzz/C/blob/main/PIA/Project/functions.c)
 * [header.h](https://github.com/Rickgzz/C/blob/main/PIA/Project/header.h)
 
+Also is recomended to use VS Code.
+
 ## References
 ```
 *  Brian W. Kernighan, Dennis M. Ritchie - The C Programming Language, Second Edition (1988). 
