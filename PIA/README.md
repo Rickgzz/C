@@ -16,6 +16,10 @@ The circuits can be connected in:
 
 ## Structure
 
+The principal structure of the code consist on a serie of question in a loop that collect all the input data in a couple of Structs, separating them depending of how the component is conected.
+
+Once you have finished introduccing components, the code take them...
+
 
 
 ## Functions
