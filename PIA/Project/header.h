@@ -1,14 +1,14 @@
 #include <stdio.h>
 #define MAX 50
 
-struct SERIE{
+struct SERIE{                      //Storage of all the values of series components
 
     int num;
     float resistance, voltage, current;
 
 } SERIE[MAX];
 
-struct PARALLEL{
+struct PARALLEL{                    //Storage of all the values of parallel components
 
     int num;
     float resistance, voltage, current;
