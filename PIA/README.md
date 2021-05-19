@@ -37,7 +37,7 @@ Also is recomended to use VS Code.
 ## References
 ```
 *  Brian W. Kernighan, Dennis M. Ritchie - The C Programming Language, Second Edition (1988). 
-*  Examples done in class.
+*  Examples made in class.
 *  c-refcard.
 ```
 
