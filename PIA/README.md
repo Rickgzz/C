@@ -21,7 +21,7 @@ The principal structure of the code consist on a serie of question in a loop tha
 
 Once you have finished introduccing components, the code take them...
 
-## Structs
+### Structs
 
 ```
 struct SERIE{
@@ -31,6 +31,10 @@ struct SERIE{
 
 } SERIE[MAX];
 ```
+* Here is were all the data related to the components connected in series would be storage, such as the component numbers, their individual resistance value, current and voltage.
+
+
+
 ```
 struct PARALLEL{
 
@@ -39,24 +43,29 @@ struct PARALLEL{
     
 } PARALLEL[MAX];
 ```
+* Here is were all the data related to the components connected in parallel would be storage, such as the component numbers, their individual resistance value, current and voltage.
 
-## Functions
+### Functions
 
 ```
 void SumRes(float*, float*, int, int);
 ```
-
+* The function *SumRes* is responsible for all the operations necessary to obtain the equivalent resistances of the components in parallel and to obtain the total resistance of the circuit.
+  
 ```
 void ValSerie(float*, int);
 ```
+* The *ValSerie* function performs the necessary operations to obtain the individual values of each component in series.
 
 ```
 void ValParallel(float*, float*, float*, float*, int);
 ```
+* The *ValParallel* function first corroborates that exist components in parallel, if there are then continues to obtain the values given each component.
 
 ```
 void PrintValues(float, float, float, int, int);
 ```
+* The *PrintValues* function is responsible for printing both the total values of the circuit and the values of each component in it.
 
 ## Series & Parallel circuits
 
