@@ -6,9 +6,9 @@ The main purpose of this program is to calculate the voltage, current and resist
 The circuits can be connected in: 
  
 
-* SERIES
-* PARALLEL
-* MIXED
+* **SERIES**
+* **PARALLEL**
+* **MIXED**
 
 <p align="center">
 <img src="https://github.com/Rickgzz/C/blob/main/Exercises/example2.png">
