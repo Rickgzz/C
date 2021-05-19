@@ -10,10 +10,23 @@ The circuits can be connected in:
 * PARALLEL
 * MIXED
 
+<p align="center">
+<img src="https://github.com/Rickgzz/C/blob/main/Exercises/example2.png">
+</p>
 
 ## Structure
 
+
+
 ## Functions
+
+## Execution
+
+Files needed to run the code:
+
+* [main.c](https://github.com/Rickgzz/C/blob/main/PIA/Project/mainV8.c)
+* [functions.c](https://github.com/Rickgzz/C/blob/main/PIA/Project/functions.c)
+* [header.h](https://github.com/Rickgzz/C/blob/main/PIA/Project/header.h)
 
 ## References
 ```
