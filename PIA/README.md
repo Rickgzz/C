@@ -21,7 +21,24 @@ The principal structure of the code consist on a serie of question in a loop tha
 
 Once you have finished introduccing components, the code take them...
 
+## Structs
 
+```
+struct SERIE{
+
+    int num;
+    float resistance, voltage, current;
+
+} SERIE[MAX];
+```
+```
+struct PARALLEL{
+
+    int num;
+    float resistance, voltage, current;
+    
+} PARALLEL[MAX];
+```
 
 ## Functions
 
@@ -42,6 +59,13 @@ void PrintValues(float, float, float, int, int);
 ```
 
 ## Series & Parallel circuits
+
+## Outputs
+
+<p align="center">
+<img src="https://github.com/Rickgzz/C/blob/main/Exercises/outputs.png">
+</p>
+
 
 ## Execution
 
