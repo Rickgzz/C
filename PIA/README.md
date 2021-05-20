@@ -15,6 +15,9 @@ The circuits can be connected in:
 <img src="https://github.com/Rickgzz/C/blob/main/Exercises/example2.png">
 </p>
 
+## Demo
+
+**Watch a video of the code in action: [here](https://youtu.be/2JyMlISdWv0)**
 ## Structure
 
 The main structure of the code consists of a series of questions in a loop that collects all the input data in a couple of Structs, separating them depending on how the component is connected.
@@ -107,7 +110,5 @@ Also is recomended to use VS Code.
 | 1895539 | IME | Ricardo Gael Gonzalez Varela |
 
 
-## Demo
 
-**Watch a video of the code in action: [here](https://youtu.be/2JyMlISdWv0)**
 
