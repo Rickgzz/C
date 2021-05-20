@@ -109,13 +109,13 @@ Also is recomended to use VS Code.
 | ------------ | ------------ | ------------ |
 | 1895539 | IME | Ricardo Gael Gonzalez Varela |
 
-## Self-evaluation
-* 1: complexity (2)
-* 2: functionality (3)
-* 3: code (3) 
-* 4: storage (1)
-* 5: documentation (3) 
+* 1: complexity 1 (if it is a very simple code I could improve this part)
+* 2: functionality 2 (works exactly as intended but could be improved)
+* 3: code 3 (I feel it is well organized and commented, easy to understand)
+* 4: storage 2 (I think I could improve this part)
+* 5: documentation 3 (no spelling errors)
 
+11/15
 
 
 
