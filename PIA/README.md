@@ -109,6 +109,14 @@ Also is recomended to use VS Code.
 | ------------ | ------------ | ------------ |
 | 1895539 | IME | Ricardo Gael Gonzalez Varela |
 
+## Self-evaluation
+1: complexity (2)
+2: functionality (3)
+3: code (3) 
+4: storage (1)
+5: documentation (3) 
+
+
 
 
 
